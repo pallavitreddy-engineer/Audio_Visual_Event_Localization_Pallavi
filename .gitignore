@@ -1,0 +1,27 @@
+# Dataset (too large for git)
+AVE_Dataset/
+
+# Pre-extracted features (~1.2 GB)
+features/
+
+# Logs
+pipeline.log
+pipeline_err.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# Jupyter (removed but just in case)
+.ipynb_checkpoints/
