@@ -68,7 +68,18 @@ EARLY_STOPPING_PATIENCE = 5
 MODALITY_DROPOUT_PROB = 0.1        # 10% chance of dropping one modality
 
 # Device selection
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+import torch
+
+def get_device():
+    if torch.backends.mps.is_available():
+        return torch.device("mps")
+    elif torch.cuda.is_available():
+        return torch.device("cuda")
+    else:
+        return torch.device("cpu")
+
+DEVICE = get_device()
+print("Using device:", DEVICE)
 
 # ──────────────────────────────────────────────
 # Event categories (28 categories from AVE dataset)

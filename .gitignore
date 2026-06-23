@@ -1,27 +1,18 @@
-# Dataset (too large for git)
-AVE_Dataset/
-
-# Pre-extracted features (~1.2 GB)
-features/
-
-# Logs
-pipeline.log
-pipeline_err.log
-
-# Python
+# Python environment
+ave_env/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
-*.egg-info/
-dist/
-build/
 
-# IDE
-.vscode/
-.idea/
-.claude/
+# Dataset and large files
+AVE_Dataset/
+features/
+checkpoints/
+*.pt
+*.pth
 
-# Jupyter (removed but just in case)
-.ipynb_checkpoints/
+# Logs/cache
+.cache/
+mlruns/
+
+# Mac files
+.DS_Store
